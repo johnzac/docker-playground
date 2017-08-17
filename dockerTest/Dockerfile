@@ -1,4 +1,4 @@
-From rootfs
+From johnzac92/rootfs:latest
 COPY scripts /usr/html/scripts/
 COPY execute.sh startServices.sh
 EXPOSE 80
