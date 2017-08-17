@@ -1,0 +1,24 @@
+---
+# tasks file for docker-playground-role
+- name: pulling git checkout
+  git:
+    repo: "{{ githubRepoUrl }}"
+    dest: "{{ hostRepoDestination }}"
+
+- name: Building the image for testserver
+  become: true
+  docker_image:
+      path: "{{ dockerBuildPath }}"
+      name: "{{ dockerImageName }}"
+
+- name: starting testserver
+  become: true
+  docker_container:
+    name: "{{ containerName }}"
+    image: "{{ dockerImageName }}"
+    state: started
+    ports:
+     - "80:80"
+
+
+

@@ -1,0 +1,7 @@
+---
+# vars file for docker-playground-role
+githubRepoUrl: "https://github.com/johnzac/docker-playground.git"
+hostRepoDestination: "/home/ubuntu/docker-playground"
+dockerBuildPath: "/home/ubuntu/docker-playground/dockerTest"
+dockerImageName: "testservertest"
+containerName: "testServerte"
