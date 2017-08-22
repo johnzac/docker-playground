@@ -10,6 +10,8 @@
   docker_image:
       path: "{{ dockerBuildPath }}"
       name: "{{ dockerImageName }}"
+      state: present
+      force: yes
 
 - name: starting testserver
   become: true
